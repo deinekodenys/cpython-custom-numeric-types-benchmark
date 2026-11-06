@@ -1,0 +1,46 @@
+Machine state for the measurement campaign
+
+written             2026-09-25T18:30:39+03:00
+status              complete
+kernel              4.15.0-163-generic
+cpu                 AMD A10-8700P Radeon R6, 10 Compute Cores 4C+6G
+vendor              AuthenticAMD
+online cpus         0,2
+measurement core    2
+smt control         off
+smt active          0
+cpufreq boost       0
+cpu0 HWCR[25]      1
+cpu2 HWCR[25]      1
+cpu0 cpufreq        governor=performance min=1600000 max=1600000 cur=1596079
+cpu2 cpufreq        governor=performance min=1600000 max=1600000 cur=1595755
+target frequency    1600000 kHz
+peak under load     1597022 kHz
+boost under load    at 1800000 kHz, peak 3031558 kHz
+aslr                2
+nmi watchdog        0
+console log level   1
+default irq mask    1
+irqs on cpu 0       28
+irqs not movable    5
+graphical.target    inactive
+sessions closed     14 c3
+units checked       anacron.timer anacron.service cron.service apt-daily.timer apt-daily.service apt-daily-upgrade.timer motd-news.timer ua-timer.timer ua-messaging.timer snapd.snap-repair.timer snapd.socket snapd.service packagekit.service fstrim.timer systemd-tmpfiles-clean.timer ondemand.service irqbalance.service
+load average        0.88 1.45 1.00 1/286 13566
+
+Steps
+[1] preconditions: ok (AuthenticAMD)
+[2] kernel messages kept off the console: ok
+[3] mains power: ok (on mains)
+[4] graphical session stopped: ok (closed sessions 14 c3)
+[5] no browser or package manager running: ok
+[6] background services stopped: ok (17 units inactive)
+[7] SMT disabled: ok (off)
+[8] measurement core selected: ok (CPU 2, online: 0 2)
+[9] boost controls switched off: ok (HWCR[25] set by the driver on CPUs 0 2)
+[10] governor and fixed frequency: ok (performance, 1800000 kHz on CPUs 0 2)
+[11] interrupts moved to CPU 0: ok (28 on CPU 0, 5 managed by the kernel)
+[12] NMI watchdog disabled: ok
+[13] address space layout randomisation enabled: ok
+[14] machine idle: ok (load 0.47 after 70 s)
+[15] frequency held under load on CPU 2: ok (peak 1597022 kHz at 1600000 kHz; boost at 1800000 kHz, peak 3031558 kHz)

@@ -1,0 +1,13 @@
+{
+ "built": "2026-08-25T20:54:53+0300",
+ "cc": "gcc",
+ "cc_version": "gcc (Ubuntu 7.5.0-3ubuntu1~18.04) 7.5.0",
+ "flags_full": "-O2 -shared -fPIC -I/opt/python3.12/include/python3.12",
+ "flags_limited": "-O2 -shared -fPIC -DLIMITED -I/opt/python3.12/include/python3.12",
+ "include": "/opt/python3.12/include/python3.12",
+ "python": "/opt/python3.12/bin/python3.12",
+ "python_version": "3.12.11 (main, Aug 25 2026, 03:12:06) [GCC 7.5.0]",
+ "probe_c_md5": "3a29bd9104bb86d46f984a1cbefac30c",
+ "probe_full_md5": "d4ce3f0231de53a660cc7e3682239cad",
+ "probe_limited_md5": "fc9352b93b3cb392ee395eeaa9608403"
+}

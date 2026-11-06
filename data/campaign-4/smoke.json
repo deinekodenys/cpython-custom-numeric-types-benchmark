@@ -1,0 +1,910 @@
+{
+ "protocol_md5": "ea29f9d41966b1de16e37e9f5a2b407b",
+ "protocol": "/home/user/cpython-custom-numeric-types-benchmark/data/campaign-4/PROTOCOL.md",
+ "started": "2026-09-25T18:35:28+0300",
+ "core": null,
+ "smoke": true,
+ "runs_requested": 6,
+ "design": {
+  "n": 6,
+  "square": [
+   [
+    0,
+    5,
+    1,
+    4,
+    2,
+    3
+   ],
+   [
+    1,
+    0,
+    2,
+    5,
+    3,
+    4
+   ],
+   [
+    2,
+    1,
+    3,
+    0,
+    4,
+    5
+   ],
+   [
+    3,
+    2,
+    4,
+    1,
+    5,
+    0
+   ],
+   [
+    4,
+    3,
+    5,
+    2,
+    0,
+    1
+   ],
+   [
+    5,
+    4,
+    0,
+    3,
+    1,
+    2
+   ]
+  ],
+  "checks": {
+   "latin": true,
+   "each_case_each_position": true,
+   "carryover_balanced": true,
+   "ordered_pairs_seen": 30,
+   "ordered_pairs_possible": 30
+  },
+  "row_seed": 1790350528,
+  "row_sequence": [
+   3,
+   4,
+   5,
+   2,
+   1,
+   0
+  ]
+ },
+ "env_before": {
+  "cpu": {
+   "model": "AMD A10-8700P Radeon R6, 10 Compute Cores 4C+6G",
+   "logical_cores": 2,
+   "online_cpus": [
+    0,
+    2
+   ],
+   "mhz_at_capture": [
+    1571.777,
+    1560.599
+   ],
+   "fma": true,
+   "avx2": true,
+   "avx512f": false
+  },
+  "freq": {
+   "cpus": [
+    0,
+    2
+   ],
+   "governor": [
+    "performance",
+    "performance"
+   ],
+   "scaling_cur_khz": [
+    "1571777",
+    "1560599"
+   ],
+   "scaling_min_khz": [
+    "1600000",
+    "1600000"
+   ],
+   "scaling_max_khz": [
+    "1600000",
+    "1600000"
+   ],
+   "smt_control": "off",
+   "smt_active": "0",
+   "intel_no_turbo": null,
+   "cpufreq_boost": "0"
+  },
+  "container": {
+   "dockerenv": false,
+   "cgroup_mentions_container": false,
+   "systemd_detect_virt": "none",
+   "hypervisor_flag": false
+  },
+  "build": {
+   "python": "3.12.11 (main, Aug 25 2026, 03:12:06) [GCC 7.5.0]",
+   "implementation": "CPython",
+   "probe_build": {
+    "built": "2026-09-25T18:35:17+0300",
+    "cc": "gcc",
+    "cc_version": "gcc (Ubuntu 7.5.0-3ubuntu1~18.04) 7.5.0",
+    "flags_full": "-O2 -shared -fPIC -falign-functions=64 -I/opt/python3.12/include/python3.12",
+    "flags_limited": "-O2 -shared -fPIC -falign-functions=64 -DLIMITED -I/opt/python3.12/include/python3.12",
+    "include": "/opt/python3.12/include/python3.12",
+    "python": "/opt/python3.12/bin/python3.12",
+    "python_version": "3.12.11 (main, Aug 25 2026, 03:12:06) [GCC 7.5.0]",
+    "probe_c_md5": "d44af6930d4f9384c8ec1a74ebfb1576",
+    "probe_full_md5": "0014a9307bd6bb6af5821a06c1015dc9",
+    "probe_limited_md5": "41026098365aaca8399047d37c8f410d",
+    "hot_functions": {
+     "probe_full": {
+      "inobj_add": 3520,
+      "inobj_dealloc": 4224,
+      "tblobj_add": 3072,
+      "tblobj_dealloc": 4032
+     },
+     "probe_limited": {
+      "inobj_add": 3520,
+      "inobj_dealloc": 4160,
+      "tblobj_add": 3072,
+      "tblobj_dealloc": 4032
+     }
+    }
+   },
+   "gil_disabled": false,
+   "cflags": "-fno-strict-overflow -Wsign-compare -DNDEBUG -g -O3 -Wall",
+   "cc": "gcc -pthread",
+   "gcc_version": [
+    "gcc (Ubuntu 7.5.0-3ubuntu1~18.04) 7.5.0"
+   ],
+   "libc": "glibc 2.27",
+   "pythonhashseed": "0",
+   "kernel": "Linux-4.15.0-163-generic-x86_64-with-glibc2.27",
+   "uname": "Linux owner-Aspire-E5-552G 4.15.0-163-generic #171-Ubuntu SMP Fri Nov 5 11:55:11 UTC 2021 x86_64 x86_64",
+   "sources": {
+    "measure.py": "abba57dfd868b5b589709bc7097d8711",
+    "probe.c": "d44af6930d4f9384c8ec1a74ebfb1576",
+    "runner.py": "90e2902c419958dfa09a7412178826e8",
+    "PROTOCOL.md": "ea29f9d41966b1de16e37e9f5a2b407b",
+    "prepare_machine.sh": "615762fa2199f3d1af2f8785be983d67"
+   },
+   "extensions": {
+    "probe_full": {
+     "path": "/home/user/cpython-custom-numeric-types-benchmark/probe_full.so",
+     "md5": "0014a9307bd6bb6af5821a06c1015dc9",
+     "size": 13672,
+     "mtime": 1790350516.7982333
+    },
+    "probe_limited": {
+     "path": "/home/user/cpython-custom-numeric-types-benchmark/probe_limited.so",
+     "md5": "41026098365aaca8399047d37c8f410d",
+     "size": 13672,
+     "mtime": 1790350517.1062434
+    }
+   }
+  },
+  "machine_state_md5": "f1b5f2cb11770e39920330b252de82b1",
+  "loadavg": [
+   0.07,
+   0.55,
+   0.72
+  ],
+  "captured": "2026-09-25T18:35:28+0300"
+ },
+ "runs": [
+  {
+   "seq": 0,
+   "order": [
+    3,
+    2,
+    4,
+    1,
+    5,
+    0
+   ],
+   "affinity": {
+    "requested": null,
+    "applied": null,
+    "actual": [
+     0,
+     2
+    ],
+    "error": "not requested"
+   },
+   "ov_start_ns": 56.0462,
+   "ov_end_ns": 54.2132,
+   "ov_drift_ns": -1.8329999999999984,
+   "ov_used_ns": 55.1297,
+   "n": 5000,
+   "reps": 3,
+   "load_before": [
+    0.07,
+    0.55,
+    0.72
+   ],
+   "load_after": [
+    0.07,
+    0.55,
+    0.72
+   ],
+   "cases": [
+    {
+     "class": "5",
+     "case_index": 3,
+     "position": 0,
+     "label": "class 5: table, slots, full API",
+     "median_raw_ns": 146.3726,
+     "min_raw_ns": 145.5154,
+     "max_raw_ns": 149.4838,
+     "median_ns": 91.2429
+    },
+    {
+     "class": "4",
+     "case_index": 2,
+     "position": 1,
+     "label": "class 4: in-object, slots, limited API",
+     "median_raw_ns": 132.6012,
+     "min_raw_ns": 132.3256,
+     "max_raw_ns": 135.7234,
+     "median_ns": 77.4715
+    },
+    {
+     "class": "6",
+     "case_index": 4,
+     "position": 2,
+     "label": "class 6: in-object, Python, no C",
+     "median_raw_ns": 956.0196,
+     "min_raw_ns": 950.7996,
+     "max_raw_ns": 956.5034,
+     "median_ns": 900.8899
+    },
+    {
+     "class": "3",
+     "case_index": 1,
+     "position": 3,
+     "label": "class 3: in-object, slots, full API",
+     "median_raw_ns": 129.2318,
+     "min_raw_ns": 127.6734,
+     "max_raw_ns": 132.0944,
+     "median_ns": 74.1021
+    },
+    {
+     "class": "7",
+     "case_index": 5,
+     "position": 4,
+     "label": "class 7: table, slots, limited API",
+     "median_raw_ns": 150.3998,
+     "min_raw_ns": 147.823,
+     "max_raw_ns": 151.1686,
+     "median_ns": 95.2701
+    },
+    {
+     "class": "base",
+     "case_index": 0,
+     "position": 5,
+     "label": "base: native float",
+     "median_raw_ns": 98.1716,
+     "min_raw_ns": 91.9204,
+     "max_raw_ns": 100.109,
+     "median_ns": 43.0419
+    }
+   ],
+   "row_id": 3
+  },
+  {
+   "seq": 1,
+   "order": [
+    4,
+    3,
+    5,
+    2,
+    0,
+    1
+   ],
+   "affinity": {
+    "requested": null,
+    "applied": null,
+    "actual": [
+     0,
+     2
+    ],
+    "error": "not requested"
+   },
+   "ov_start_ns": 59.9164,
+   "ov_end_ns": 58.075,
+   "ov_drift_ns": -1.8414000000000001,
+   "ov_used_ns": 58.9957,
+   "n": 5000,
+   "reps": 3,
+   "load_before": [
+    0.07,
+    0.55,
+    0.72
+   ],
+   "load_after": [
+    0.07,
+    0.55,
+    0.72
+   ],
+   "cases": [
+    {
+     "class": "6",
+     "case_index": 4,
+     "position": 0,
+     "label": "class 6: in-object, Python, no C",
+     "median_raw_ns": 985.1346,
+     "min_raw_ns": 950.2798,
+     "max_raw_ns": 987.4428,
+     "median_ns": 926.1388999999999
+    },
+    {
+     "class": "5",
+     "case_index": 3,
+     "position": 1,
+     "label": "class 5: table, slots, full API",
+     "median_raw_ns": 144.2208,
+     "min_raw_ns": 143.9268,
+     "max_raw_ns": 144.5346,
+     "median_ns": 85.2251
+    },
+    {
+     "class": "7",
+     "case_index": 5,
+     "position": 2,
+     "label": "class 7: table, slots, limited API",
+     "median_raw_ns": 145.4144,
+     "min_raw_ns": 145.2614,
+     "max_raw_ns": 146.833,
+     "median_ns": 86.4187
+    },
+    {
+     "class": "4",
+     "case_index": 2,
+     "position": 3,
+     "label": "class 4: in-object, slots, limited API",
+     "median_raw_ns": 131.1926,
+     "min_raw_ns": 129.6826,
+     "max_raw_ns": 133.7002,
+     "median_ns": 72.1969
+    },
+    {
+     "class": "base",
+     "case_index": 0,
+     "position": 4,
+     "label": "base: native float",
+     "median_raw_ns": 94.0272,
+     "min_raw_ns": 93.5962,
+     "max_raw_ns": 97.8048,
+     "median_ns": 35.031499999999994
+    },
+    {
+     "class": "3",
+     "case_index": 1,
+     "position": 5,
+     "label": "class 3: in-object, slots, full API",
+     "median_raw_ns": 129.591,
+     "min_raw_ns": 129.4246,
+     "max_raw_ns": 139.1524,
+     "median_ns": 70.59530000000001
+    }
+   ],
+   "row_id": 4
+  },
+  {
+   "seq": 2,
+   "order": [
+    5,
+    4,
+    0,
+    3,
+    1,
+    2
+   ],
+   "affinity": {
+    "requested": null,
+    "applied": null,
+    "actual": [
+     0,
+     2
+    ],
+    "error": "not requested"
+   },
+   "ov_start_ns": 60.751,
+   "ov_end_ns": 58.2644,
+   "ov_drift_ns": -2.4865999999999957,
+   "ov_used_ns": 59.5077,
+   "n": 5000,
+   "reps": 3,
+   "load_before": [
+    0.07,
+    0.55,
+    0.72
+   ],
+   "load_after": [
+    0.07,
+    0.55,
+    0.72
+   ],
+   "cases": [
+    {
+     "class": "7",
+     "case_index": 5,
+     "position": 0,
+     "label": "class 7: table, slots, limited API",
+     "median_raw_ns": 148.8388,
+     "min_raw_ns": 148.423,
+     "max_raw_ns": 149.8422,
+     "median_ns": 89.33109999999999
+    },
+    {
+     "class": "6",
+     "case_index": 4,
+     "position": 1,
+     "label": "class 6: in-object, Python, no C",
+     "median_raw_ns": 973.7098,
+     "min_raw_ns": 959.9224,
+     "max_raw_ns": 973.8654,
+     "median_ns": 914.2021
+    },
+    {
+     "class": "base",
+     "case_index": 0,
+     "position": 2,
+     "label": "base: native float",
+     "median_raw_ns": 96.6446,
+     "min_raw_ns": 93.639,
+     "max_raw_ns": 101.6944,
+     "median_ns": 37.1369
+    },
+    {
+     "class": "5",
+     "case_index": 3,
+     "position": 3,
+     "label": "class 5: table, slots, full API",
+     "median_raw_ns": 145.826,
+     "min_raw_ns": 145.7292,
+     "max_raw_ns": 151.5292,
+     "median_ns": 86.3183
+    },
+    {
+     "class": "3",
+     "case_index": 1,
+     "position": 4,
+     "label": "class 3: in-object, slots, full API",
+     "median_raw_ns": 128.3964,
+     "min_raw_ns": 124.6316,
+     "max_raw_ns": 131.9526,
+     "median_ns": 68.8887
+    },
+    {
+     "class": "4",
+     "case_index": 2,
+     "position": 5,
+     "label": "class 4: in-object, slots, limited API",
+     "median_raw_ns": 135.2802,
+     "min_raw_ns": 131.9642,
+     "max_raw_ns": 138.2506,
+     "median_ns": 75.77250000000001
+    }
+   ],
+   "row_id": 5
+  },
+  {
+   "seq": 3,
+   "order": [
+    2,
+    1,
+    3,
+    0,
+    4,
+    5
+   ],
+   "affinity": {
+    "requested": null,
+    "applied": null,
+    "actual": [
+     0,
+     2
+    ],
+    "error": "not requested"
+   },
+   "ov_start_ns": 58.6826,
+   "ov_end_ns": 58.2076,
+   "ov_drift_ns": -0.4750000000000014,
+   "ov_used_ns": 58.4451,
+   "n": 5000,
+   "reps": 3,
+   "load_before": [
+    0.07,
+    0.55,
+    0.72
+   ],
+   "load_after": [
+    0.07,
+    0.55,
+    0.72
+   ],
+   "cases": [
+    {
+     "class": "4",
+     "case_index": 2,
+     "position": 0,
+     "label": "class 4: in-object, slots, limited API",
+     "median_raw_ns": 131.6814,
+     "min_raw_ns": 130.6256,
+     "max_raw_ns": 133.1906,
+     "median_ns": 73.2363
+    },
+    {
+     "class": "3",
+     "case_index": 1,
+     "position": 1,
+     "label": "class 3: in-object, slots, full API",
+     "median_raw_ns": 129.67,
+     "min_raw_ns": 127.6752,
+     "max_raw_ns": 130.0206,
+     "median_ns": 71.22489999999999
+    },
+    {
+     "class": "5",
+     "case_index": 3,
+     "position": 2,
+     "label": "class 5: table, slots, full API",
+     "median_raw_ns": 143.9816,
+     "min_raw_ns": 142.634,
+     "max_raw_ns": 150.4272,
+     "median_ns": 85.53649999999999
+    },
+    {
+     "class": "base",
+     "case_index": 0,
+     "position": 3,
+     "label": "base: native float",
+     "median_raw_ns": 104.6132,
+     "min_raw_ns": 93.9548,
+     "max_raw_ns": 106.3602,
+     "median_ns": 46.16810000000001
+    },
+    {
+     "class": "6",
+     "case_index": 4,
+     "position": 4,
+     "label": "class 6: in-object, Python, no C",
+     "median_raw_ns": 916.2056,
+     "min_raw_ns": 913.1668,
+     "max_raw_ns": 943.2198,
+     "median_ns": 857.7605
+    },
+    {
+     "class": "7",
+     "case_index": 5,
+     "position": 5,
+     "label": "class 7: table, slots, limited API",
+     "median_raw_ns": 149.7884,
+     "min_raw_ns": 149.0996,
+     "max_raw_ns": 151.7966,
+     "median_ns": 91.3433
+    }
+   ],
+   "row_id": 2
+  },
+  {
+   "seq": 4,
+   "order": [
+    1,
+    0,
+    2,
+    5,
+    3,
+    4
+   ],
+   "affinity": {
+    "requested": null,
+    "applied": null,
+    "actual": [
+     0,
+     2
+    ],
+    "error": "not requested"
+   },
+   "ov_start_ns": 56.5402,
+   "ov_end_ns": 55.147,
+   "ov_drift_ns": -1.3932000000000002,
+   "ov_used_ns": 55.843599999999995,
+   "n": 5000,
+   "reps": 3,
+   "load_before": [
+    0.07,
+    0.55,
+    0.72
+   ],
+   "load_after": [
+    0.07,
+    0.55,
+    0.72
+   ],
+   "cases": [
+    {
+     "class": "3",
+     "case_index": 1,
+     "position": 0,
+     "label": "class 3: in-object, slots, full API",
+     "median_raw_ns": 125.1468,
+     "min_raw_ns": 124.468,
+     "max_raw_ns": 125.2584,
+     "median_ns": 69.3032
+    },
+    {
+     "class": "base",
+     "case_index": 0,
+     "position": 1,
+     "label": "base: native float",
+     "median_raw_ns": 97.3464,
+     "min_raw_ns": 93.3774,
+     "max_raw_ns": 98.3576,
+     "median_ns": 41.50280000000001
+    },
+    {
+     "class": "4",
+     "case_index": 2,
+     "position": 2,
+     "label": "class 4: in-object, slots, limited API",
+     "median_raw_ns": 132.821,
+     "min_raw_ns": 132.034,
+     "max_raw_ns": 132.9756,
+     "median_ns": 76.9774
+    },
+    {
+     "class": "7",
+     "case_index": 5,
+     "position": 3,
+     "label": "class 7: table, slots, limited API",
+     "median_raw_ns": 148.6136,
+     "min_raw_ns": 147.7414,
+     "max_raw_ns": 148.756,
+     "median_ns": 92.77
+    },
+    {
+     "class": "5",
+     "case_index": 3,
+     "position": 4,
+     "label": "class 5: table, slots, full API",
+     "median_raw_ns": 144.8632,
+     "min_raw_ns": 141.3908,
+     "max_raw_ns": 145.1414,
+     "median_ns": 89.01960000000001
+    },
+    {
+     "class": "6",
+     "case_index": 4,
+     "position": 5,
+     "label": "class 6: in-object, Python, no C",
+     "median_raw_ns": 909.1658,
+     "min_raw_ns": 903.5766,
+     "max_raw_ns": 909.2226,
+     "median_ns": 853.3222
+    }
+   ],
+   "row_id": 1
+  },
+  {
+   "seq": 5,
+   "order": [
+    0,
+    5,
+    1,
+    4,
+    2,
+    3
+   ],
+   "affinity": {
+    "requested": null,
+    "applied": null,
+    "actual": [
+     0,
+     2
+    ],
+    "error": "not requested"
+   },
+   "ov_start_ns": 55.7904,
+   "ov_end_ns": 89.0462,
+   "ov_drift_ns": 33.2558,
+   "ov_used_ns": 72.4183,
+   "n": 5000,
+   "reps": 3,
+   "load_before": [
+    0.07,
+    0.55,
+    0.72
+   ],
+   "load_after": [
+    0.07,
+    0.55,
+    0.72
+   ],
+   "cases": [
+    {
+     "class": "base",
+     "case_index": 0,
+     "position": 0,
+     "label": "base: native float",
+     "median_raw_ns": 92.549,
+     "min_raw_ns": 90.4434,
+     "max_raw_ns": 98.5778,
+     "median_ns": 20.130700000000004
+    },
+    {
+     "class": "7",
+     "case_index": 5,
+     "position": 1,
+     "label": "class 7: table, slots, limited API",
+     "median_raw_ns": 147.1666,
+     "min_raw_ns": 146.6506,
+     "max_raw_ns": 147.3226,
+     "median_ns": 74.74829999999999
+    },
+    {
+     "class": "3",
+     "case_index": 1,
+     "position": 2,
+     "label": "class 3: in-object, slots, full API",
+     "median_raw_ns": 158.9402,
+     "min_raw_ns": 158.3512,
+     "max_raw_ns": 162.4082,
+     "median_ns": 86.5219
+    },
+    {
+     "class": "6",
+     "case_index": 4,
+     "position": 3,
+     "label": "class 6: in-object, Python, no C",
+     "median_raw_ns": 997.434,
+     "min_raw_ns": 968.3018,
+     "max_raw_ns": 998.9054,
+     "median_ns": 925.0156999999999
+    },
+    {
+     "class": "4",
+     "case_index": 2,
+     "position": 4,
+     "label": "class 4: in-object, slots, limited API",
+     "median_raw_ns": 163.9756,
+     "min_raw_ns": 157.6138,
+     "max_raw_ns": 166.0472,
+     "median_ns": 91.55729999999998
+    },
+    {
+     "class": "5",
+     "case_index": 3,
+     "position": 5,
+     "label": "class 5: table, slots, full API",
+     "median_raw_ns": 178.968,
+     "min_raw_ns": 174.8494,
+     "max_raw_ns": 182.6568,
+     "median_ns": 106.54969999999999
+    }
+   ],
+   "row_id": 0
+  }
+ ],
+ "env_after": {
+  "cpu": {
+   "model": "AMD A10-8700P Radeon R6, 10 Compute Cores 4C+6G",
+   "logical_cores": 2,
+   "online_cpus": [
+    0,
+    2
+   ],
+   "mhz_at_capture": [
+    1572.561,
+    1549.638
+   ],
+   "fma": true,
+   "avx2": true,
+   "avx512f": false
+  },
+  "freq": {
+   "cpus": [
+    0,
+    2
+   ],
+   "governor": [
+    "performance",
+    "performance"
+   ],
+   "scaling_cur_khz": [
+    "1572561",
+    "1549638"
+   ],
+   "scaling_min_khz": [
+    "1600000",
+    "1600000"
+   ],
+   "scaling_max_khz": [
+    "1600000",
+    "1600000"
+   ],
+   "smt_control": "off",
+   "smt_active": "0",
+   "intel_no_turbo": null,
+   "cpufreq_boost": "0"
+  },
+  "container": {
+   "dockerenv": false,
+   "cgroup_mentions_container": false,
+   "systemd_detect_virt": "none",
+   "hypervisor_flag": false
+  },
+  "build": {
+   "python": "3.12.11 (main, Aug 25 2026, 03:12:06) [GCC 7.5.0]",
+   "implementation": "CPython",
+   "probe_build": {
+    "built": "2026-09-25T18:35:17+0300",
+    "cc": "gcc",
+    "cc_version": "gcc (Ubuntu 7.5.0-3ubuntu1~18.04) 7.5.0",
+    "flags_full": "-O2 -shared -fPIC -falign-functions=64 -I/opt/python3.12/include/python3.12",
+    "flags_limited": "-O2 -shared -fPIC -falign-functions=64 -DLIMITED -I/opt/python3.12/include/python3.12",
+    "include": "/opt/python3.12/include/python3.12",
+    "python": "/opt/python3.12/bin/python3.12",
+    "python_version": "3.12.11 (main, Aug 25 2026, 03:12:06) [GCC 7.5.0]",
+    "probe_c_md5": "d44af6930d4f9384c8ec1a74ebfb1576",
+    "probe_full_md5": "0014a9307bd6bb6af5821a06c1015dc9",
+    "probe_limited_md5": "41026098365aaca8399047d37c8f410d",
+    "hot_functions": {
+     "probe_full": {
+      "inobj_add": 3520,
+      "inobj_dealloc": 4224,
+      "tblobj_add": 3072,
+      "tblobj_dealloc": 4032
+     },
+     "probe_limited": {
+      "inobj_add": 3520,
+      "inobj_dealloc": 4160,
+      "tblobj_add": 3072,
+      "tblobj_dealloc": 4032
+     }
+    }
+   },
+   "gil_disabled": false,
+   "cflags": "-fno-strict-overflow -Wsign-compare -DNDEBUG -g -O3 -Wall",
+   "cc": "gcc -pthread",
+   "gcc_version": [
+    "gcc (Ubuntu 7.5.0-3ubuntu1~18.04) 7.5.0"
+   ],
+   "libc": "glibc 2.27",
+   "pythonhashseed": "0",
+   "kernel": "Linux-4.15.0-163-generic-x86_64-with-glibc2.27",
+   "uname": "Linux owner-Aspire-E5-552G 4.15.0-163-generic #171-Ubuntu SMP Fri Nov 5 11:55:11 UTC 2021 x86_64 x86_64",
+   "sources": {
+    "measure.py": "abba57dfd868b5b589709bc7097d8711",
+    "probe.c": "d44af6930d4f9384c8ec1a74ebfb1576",
+    "runner.py": "90e2902c419958dfa09a7412178826e8",
+    "PROTOCOL.md": "ea29f9d41966b1de16e37e9f5a2b407b",
+    "prepare_machine.sh": "615762fa2199f3d1af2f8785be983d67"
+   },
+   "extensions": {
+    "probe_full": {
+     "path": "/home/user/cpython-custom-numeric-types-benchmark/probe_full.so",
+     "md5": "0014a9307bd6bb6af5821a06c1015dc9",
+     "size": 13672,
+     "mtime": 1790350516.7982333
+    },
+    "probe_limited": {
+     "path": "/home/user/cpython-custom-numeric-types-benchmark/probe_limited.so",
+     "md5": "41026098365aaca8399047d37c8f410d",
+     "size": 13672,
+     "mtime": 1790350517.1062434
+    }
+   }
+  },
+  "machine_state_md5": "f1b5f2cb11770e39920330b252de82b1",
+  "loadavg": [
+   0.07,
+   0.55,
+   0.72
+  ],
+  "captured": "2026-09-25T18:35:30+0300"
+ },
+ "finished": "2026-09-25T18:35:30+0300"
+}

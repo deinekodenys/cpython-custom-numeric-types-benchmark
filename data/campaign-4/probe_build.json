@@ -1,0 +1,27 @@
+{
+ "built": "2026-09-25T18:35:17+0300",
+ "cc": "gcc",
+ "cc_version": "gcc (Ubuntu 7.5.0-3ubuntu1~18.04) 7.5.0",
+ "flags_full": "-O2 -shared -fPIC -falign-functions=64 -I/opt/python3.12/include/python3.12",
+ "flags_limited": "-O2 -shared -fPIC -falign-functions=64 -DLIMITED -I/opt/python3.12/include/python3.12",
+ "include": "/opt/python3.12/include/python3.12",
+ "python": "/opt/python3.12/bin/python3.12",
+ "python_version": "3.12.11 (main, Aug 25 2026, 03:12:06) [GCC 7.5.0]",
+ "probe_c_md5": "d44af6930d4f9384c8ec1a74ebfb1576",
+ "probe_full_md5": "0014a9307bd6bb6af5821a06c1015dc9",
+ "probe_limited_md5": "41026098365aaca8399047d37c8f410d",
+ "hot_functions": {
+  "probe_full": {
+   "inobj_add": 3520,
+   "inobj_dealloc": 4224,
+   "tblobj_add": 3072,
+   "tblobj_dealloc": 4032
+  },
+  "probe_limited": {
+   "inobj_add": 3520,
+   "inobj_dealloc": 4160,
+   "tblobj_add": 3072,
+   "tblobj_dealloc": 4032
+  }
+ }
+}

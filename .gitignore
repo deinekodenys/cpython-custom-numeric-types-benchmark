@@ -1,0 +1,11 @@
+# Build artifacts
+*.so
+*.o
+
+# Python
+__pycache__/
+*.py[cod]
+
+# OS
+.DS_Store
+
